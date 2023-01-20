@@ -14,7 +14,7 @@ due date and time.
     command `gcc -c sum3or5.c`. Make sure to test your code on several values of `n`. When `n` is 16 the
     answer should be 60. When `n` is 1000 the answer should be 233168. 
 
-    > extern int sum3or5(int n);
+    > `extern int sum3or5(int n);`
 
 2. This problem should go in a file named `sequence.c` and should be separately compilable using the
     command `gcc -c sequence.c`
