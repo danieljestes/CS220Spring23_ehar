@@ -28,16 +28,16 @@ extern int sum3or5(int n);
        Write a function named `sequence` that takes an integer `n` and returns the length of the sequence generated.
        In the above example this would be 7.
        
-       ```
-       extern int sequence(int n);
-       ```
+        ```
+        extern int sequence(int n);
+        ```
     
     b. [5 points] Write a function named `longest` that returns the n ≤ 1000000 (one million) that generates the longest
        sequence. This function takes no parameters.
        
-       ```
-       extern int longest();
-       ```
+        ```
+        extern int longest();
+        ```
  
 3. [5 points] Write a function named `diamond` that that prompts the user for and reads a non-negative odd
    integer `n` from the user and prints a diamond pattern of `n` lines made up of asterisks. The function should be in
