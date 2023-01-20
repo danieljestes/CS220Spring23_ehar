@@ -9,17 +9,17 @@ operating system. Make sure all of the files outlined below are in your `hw1` di
 due date and time.
 
 1. [5 points] Write a C function `sum3or5` that takes an integer parameter `n` and returns the sum of the integers
-less than `n` that are multiples of 3 or 5. For example if `n` was 10 then the function would return 23 because 3 +
-5 + 6 + 9 = 23. Put your code in a file named `sum3or5.c` and make sure it compiles separately using the
-command `gcc -c sum3or5.c`. Make sure to test your code on several values of `n`. When `n` is 16 the
-answer should be 60. When `n` is 1000 the answer should be 233168. 
+    less than `n` that are multiples of 3 or 5. For example if `n` was 10 then the function would return 23 because 3 +
+    5 + 6 + 9 = 23. Put your code in a file named `sum3or5.c` and make sure it compiles separately using the
+    command `gcc -c sum3or5.c`. Make sure to test your code on several values of `n`. When `n` is 16 the
+    answer should be 60. When `n` is 1000 the answer should be 233168. 
 
-```
-extern int sum3or5(int n);
-```
+    ```
+    extern int sum3or5(int n);
+    ```
 
 2. This problem should go in a file named `sequence.c` and should be separately compilable using the
-   command `gcc -c sequence.c`
+    command `gcc -c sequence.c`
     
     a. [5 points] Consider the integer sequence defined as follows. Starting with any positive integer:
        If n is even, the next number in the sequence is n / 2. If n is odd, the next number in the sequence is 3n + 1
