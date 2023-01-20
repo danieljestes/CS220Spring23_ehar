@@ -14,37 +14,31 @@ due date and time.
     command `gcc -c sum3or5.c`. Make sure to test your code on several values of `n`. When `n` is 16 the
     answer should be 60. When `n` is 1000 the answer should be 233168. 
 
-    ```
-    extern int sum3or5(int n);
-    ```
+    > extern int sum3or5(int n);
 
 2. This problem should go in a file named `sequence.c` and should be separately compilable using the
     command `gcc -c sequence.c`
     
-    a. [5 points] Consider the integer sequence defined as follows. Starting with any positive integer:
+    1. [5 points] Consider the integer sequence defined as follows. Starting with any positive integer:
        If n is even, the next number in the sequence is n / 2. If n is odd, the next number in the sequence is 3n + 1
        It is conjectured (thought it is not known) that every such sequence eventually reaches 1. For example, if we
        started with 10 then the sequence is 10 5 16 8 4 2 1.
        Write a function named `sequence` that takes an integer `n` and returns the length of the sequence generated.
        In the above example this would be 7.
        
->        extern int sequence(int n);
+       > extern int sequence(int n);
         
-    b. [5 points] Write a function named `longest` that returns the n ≤ 1000000 (one million) that generates the longest
+    2. [5 points] Write a function named `longest` that returns the n ≤ 1000000 (one million) that generates the longest
        sequence. This function takes no parameters.
        
-        ```
-        extern int longest();
-        ```
+       > extern int longest();
  
 3. [5 points] Write a function named `diamond` that that prompts the user for and reads a non-negative odd
    integer `n` from the user and prints a diamond pattern of `n` lines made up of asterisks. The function should be in
    a file named `diamond.c`. The middle row of asterisks should have `n` asterisks. The function should continue
    to prompt the user until they enter a -1. Here is a sample run of the function.
    
-   ```
-   extern void diamond(int n);
-   ```
+   > extern void diamond(int n);
 
 ```
 Enter non-negative odd integer: 5
