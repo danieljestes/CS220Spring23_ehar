@@ -26,19 +26,19 @@ due date and time.
        Write a function named `sequence` that takes an integer `n` and returns the length of the sequence generated.
        In the above example this would be 7.
        
-       > extern int sequence(int n);
+       > `extern int sequence(int n);`
         
     2. [5 points] Write a function named `longest` that returns the n ≤ 1000000 (one million) that generates the longest
        sequence. This function takes no parameters.
        
-       > extern int longest();
+       > `extern int longest();`
  
 3. [5 points] Write a function named `diamond` that that prompts the user for and reads a non-negative odd
    integer `n` from the user and prints a diamond pattern of `n` lines made up of asterisks. The function should be in
    a file named `diamond.c`. The middle row of asterisks should have `n` asterisks. The function should continue
    to prompt the user until they enter a -1. Here is a sample run of the function.
    
-   > extern void diamond(int n);
+   > `extern void diamond(int n);`
 
 ```
 Enter non-negative odd integer: 5
