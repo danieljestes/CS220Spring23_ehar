@@ -38,7 +38,7 @@ due date and time.
    a file named `diamond.c`. The middle row of asterisks should have `n` asterisks. The function should continue
    to prompt the user until they enter a -1. Here is a sample run of the function.
    
-   > `extern void diamond(int n);`
+   > `extern void diamond();`
 
 ```
 Enter non-negative odd integer: 5
