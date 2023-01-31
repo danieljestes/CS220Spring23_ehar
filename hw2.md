@@ -2,11 +2,7 @@
 
 Due Monday February 5th by the start of class at 9:20AM.
 
-Create a directory named `hw2`. Write a function `int2hex` 
-in a file named `int2hex.c`. `int2hex` takes 
-an unsigned integer `n` and converts `n` to hexadecimal.  
-The hexadecimal value returned is a string and is returned 
-through an array of characters.
+Create a directory named `hw2`. Write a function `int2hex` in a file named `int2hex.c`. `int2hex` takes an unsigned integer `n` and converts `n` to hexadecimal. The hexadecimal value returned is a string and is returned through an array of characters.
 
 ```
 /*
