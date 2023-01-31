@@ -33,8 +33,3 @@ ehar@raspberrypi:~/ehar_CS220/hw2 $
 2. The algorithm should be similar the one we wrote for converting decimal to binary. Do not try and take a shortcut by using `printf` with a `%x` format specifier. Remember, the `int2hex` function must store the result in the `buff` parameter passed to it, and not print anything.
 
 3. Don't google around for solutions.  That's not the point of trying to learn to code.
-
-
-
-
- 
