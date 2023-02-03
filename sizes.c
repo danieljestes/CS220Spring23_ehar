@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main() {
+    int x = 08;
     printf("unsigned char     %d byte(s)\n", sizeof(unsigned char));
     printf("signed char     %d byte(s)\n", sizeof(signed char));
     printf("signed short     %d byte(s)\n", sizeof(signed short));
