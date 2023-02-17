@@ -2,8 +2,8 @@
 
 ## Day of the Week (5 points)
 Create a directory named `hw3`. Finish the day of week fuction by 
-converting the following C function in assembly language. Put the function in 
-a file named `dow.s`.  Include a head file `dow.h`.
+converting the following C function into assembly language. Put the function in 
+a file named `dow.s`.  Include a header file `dow.h`.
 
 ```
 #include "dow.h"
@@ -47,7 +47,7 @@ Write the function `sum3or5` from homework 1 as an assembly
 language function. Put this in a file named `sum3or5.s` 
 
 Write a main program in a file named `main35.c` that takes the integer
-`n` as a command line argument.  If the executable were named sn3or5 
+`n` as a command line argument.  If the executable were named sum3or5 
 then  
 
 ```
