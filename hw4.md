@@ -2,8 +2,9 @@
 
 ## Digit Frequency (5 points)
 Write a program that counts the number of times a digit occurs 
-in an integer. For example, given the integer 224498344 the program might
+in an integer. For example, given the integer `224498344` the program might
 output a table:
+
 
 ```
 Digit    Frequency
@@ -22,6 +23,11 @@ Digit    Frequency
 
 Write a function `digit_freq` (in both C and assembly) that takes an integer
 an array of integers.  When the function is complete the $i_{th}$ entry in 
-array should be the frequency of digit `i`. 
+array should be the frequency of digit `i`. For example, in the example above the 
+array would look like:
+
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+|---|---|---|---|---|---|---|---|---|---|
+| 0 | 0 | 2 | 1 | 4 | 0 | 0 | 0 | 1 | 1 |
 
 ## Fast Exponentiation (5 points)
