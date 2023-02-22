@@ -27,7 +27,7 @@ array should be the frequency of digit `i`. For example, in the example above th
 array would look like:
 
 |index = | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
-|value = |---|---|---|---|---|---|---|---|---|---|
-| 0 | 0 | 2 | 1 | 4 | 0 | 0 | 0 | 1 | 1 |
+|        |---|---|---|---|---|---|---|---|---|---|
+|value = | 0 | 0 | 2 | 1 | 4 | 0 | 0 | 0 | 1 | 1 |
 
 ## Fast Exponentiation (5 points)
