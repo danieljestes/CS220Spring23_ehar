@@ -32,9 +32,14 @@ array would look like:
 
 
 ```
-// *digit_freq.h*
+// digit_freq.h
 extern void digit_freq(int n, int freq[]);
 ```
 
+Write a main function in `main_df.c` that takes an integer command line argument and prints out 
+the digit frequency in a nicely formatted table (like above).
+
 
 ## Fast Exponentiation (5 points)
+
+Consider the following definition for computing $x^y$.
