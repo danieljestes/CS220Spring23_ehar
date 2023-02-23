@@ -41,8 +41,7 @@ the digit frequency in a nicely formatted table (like above).
 
 ## Fast Exponentiation (5 points)
 
-Consider the following definition for computing $x^y$.
-
+Consider the following recursive definition for computing $x^y$.
 
 $$
 x^y = 
@@ -51,3 +50,6 @@ x^y =
       x\cdot x^{y-1} & \text{if $y$ is odd} 
 \end{cases}
 $$
+
+In both cases $x^y'$ is defined in terms of computing $x^y$ where $y'$ 
+is smaller power. 
