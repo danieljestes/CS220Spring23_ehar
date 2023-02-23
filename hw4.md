@@ -1,5 +1,7 @@
 # Homework 4 
 
+Due Friday March 3. 
+
 ## Digit Frequency (5 points)
 Write a program that counts the number of times a digit occurs 
 in an integer. For example, given the integer `224498344` the program might
@@ -65,7 +67,8 @@ take $x$ and $y$ as command line arguments.
 
 ## What to turn in
 
-1. Create a dirtectory `hw4`
+1. Create a directory `hw4`
 2. Turn in files `digit_freq.c`, `digit_freq.s`, `digit_freq.h`, and `main_df.c`
 3. Turn in files `pow.c`, `pow.s`, `pow.h`, and `main_pow.c`
+4. push all of your files to your course repo.
 
