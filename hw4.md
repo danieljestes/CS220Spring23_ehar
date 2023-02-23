@@ -58,7 +58,7 @@ $$
 In the first two cases $x^{y}$ is defined in terms of computing 
 $x^{y^\prime}$ where $y^\prime < y$.  The base case is when $y$ is $0$.
 
-Write a function `pow(x,y)` in both C and assembly and uses the recursive i
+Write a function `pow(x,y)` in both C and assembly and uses the recursive 
 algorithm above to compute $x^y$. 
 
 ```
