@@ -32,7 +32,7 @@ array would look like:
 
 
 ```
-// digit_freq.h
+// *digit_freq.h*
 extern void digit_freq(int n, int freq[]);
 ```
 
