@@ -53,4 +53,4 @@ x^y =
 $$
 
 In both cases $x^{y^\prime}$ is defined in terms of computing 
-$x^{y^\prime}$ where $y^\prime < y$.
+$x^{y^\prime}$ where $y^\prime < y$.  The base case is when $y$ is $0$.
