@@ -55,6 +55,7 @@ x^y =
 $$
 
 $$
+x^y = 
 \begin{cases} 
       (x^{y/2})^2 & \text{if $y$ is even}  \\
       x\cdot x^{y-1} & \text{if $y$ is odd} 
