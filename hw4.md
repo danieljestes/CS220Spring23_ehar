@@ -5,7 +5,6 @@ Write a program that counts the number of times a digit occurs
 in an integer. For example, given the integer `224498344` the program might
 output a table:
 
-
 ```
 Digit    Frequency
 -----    ---------
@@ -44,15 +43,6 @@ the digit frequency in a nicely formatted table (like above).
 
 Consider the following definition for computing $x^y$.
 
-$$
-x^y = 
-\left\lbrace
-    \begin{array}{lr}
-        (x^{y/2})^2, & \text{if $y$ is even } \\
-        x\cdot x^{y-1}, & \text{if $y$ is odd }
-    \end{array}
-\right\rbrace
-$$
 
 $$
 x^y = 
