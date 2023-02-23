@@ -43,3 +43,13 @@ the digit frequency in a nicely formatted table (like above).
 ## Fast Exponentiation (5 points)
 
 Consider the following definition for computing $x^y$.
+
+$$
+Y(i,k) = 
+\left\{
+    \begin{array}{lr}
+        ||R_{k}-R_{i}||^{2}, & \text{if } i \neq k\\
+        ||\triangle_{i}||^{2}, & \text{if } i\leq k
+    \end{array}
+\right\} = yz
+$$
