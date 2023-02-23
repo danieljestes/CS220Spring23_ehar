@@ -42,9 +42,10 @@ line argument and prints out the digit frequency in a nicely formatted
 table (like above).
 
 
-## Fast Exponentiation (5 points)
+## Fast Integer Exponentiation (5 points)
 
-Consider the following recursive definition for computing $x^y$.
+Consider the following recursive definition for computing $x^y$ 
+for integers $x$ and $y$.
 
 $$
 x^y = 
