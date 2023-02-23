@@ -51,4 +51,5 @@ x^y =
         (x^{y/2})^2, & \text{if $x$ is even } \\
         ||\triangle_{i}||^{2}, & \text{if } i\leq k
     \end{array}
+\right\rbrace
 $$
