@@ -51,5 +51,5 @@ x^y =
 \end{cases}
 $$
 
-In both cases $x^y'$ is defined in terms of computing $x^y$ where $y'$ 
+In both cases $x^y\'$ is defined in terms of computing $x^y$ where $y\'$ 
 is smaller power. 
