@@ -51,5 +51,4 @@ x^y =
 \end{cases}
 $$
 
-In both cases $x^{y^\prime}$ is defined in terms of computing $x^{y^\prime}$ where $y^\prime$ 
-is smaller power. 
+In both cases $x^{y^\prime}$ is defined in terms of computing $x^{y^\prime}$ where $y^\prime < y$ is smaller power. 
