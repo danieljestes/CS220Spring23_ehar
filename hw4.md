@@ -47,8 +47,10 @@ $$
 x^y = 
 \begin{cases} 
       (x^{y/2})^2 & \text{if $y$ is even}  \\
-      x\cdot x^{y-1} & \text{if $y$ is odd} 
+      x\cdot x^{y-1} & \text{if $y$ is odd} \\ 
+      1 & \text{if $y = 0$}
 \end{cases}
 $$
 
-In both cases $x^{y^\prime}$ is defined in terms of computing $x^{y^\prime}$ where $y^\prime < y$ is smaller power. 
+In both cases $x^{y^\prime}$ is defined in terms of computing 
+$x^{y^\prime}$ where $y^\prime < y$.
