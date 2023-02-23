@@ -22,12 +22,19 @@ Digit    Frequency
 ```
 
 Write a function `digit_freq` (in both C and assembly) that takes an integer
-an array of integers.  When the function is complete the $i_{th}$ entry in 
+and an array of integers.  When the function is complete the $i_{th}$ entry in 
 array should be the frequency of digit `i`. For example, in the example above the 
 array would look like:
 
 |index = | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
 |--------|---|---|---|---|---|---|---|---|---|---|
 |value = | 0 | 0 | 2 | 1 | 4 | 0 | 0 | 0 | 1 | 1 |
+
+
+```
+// digit_freq.h
+extern void digit_freq(int n, int freq[]);
+```
+
 
 ## Fast Exponentiation (5 points)
