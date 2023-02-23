@@ -1,4 +1,4 @@
-# Homework 3 
+# Homework 4 
 
 ## Digit Frequency (5 points)
 Write a program that counts the number of times a digit occurs 
@@ -35,8 +35,9 @@ array would look like:
 extern void digit_freq(int n, int freq[]);
 ```
 
-Write a main function in `main_df.c` that takes an integer command line argument and prints out 
-the digit frequency in a nicely formatted table (like above).
+Write a main function in `main_df.c` that takes an integer command 
+line argument and prints out the digit frequency in a nicely formatted 
+table (like above).
 
 
 ## Fast Exponentiation (5 points)
@@ -54,3 +55,17 @@ $$
 
 In the first two cases $x^{y}$ is defined in terms of computing 
 $x^{y^\prime}$ where $y^\prime < y$.  The base case is when $y$ is $0$.
+
+Write a function `pow(x,y)` in both C and assembly and uses the recursive i
+algorithm above to compute $x^y$. Make sure your functions are 
+recursive and not iterative (that is, using loops). Create functions 
+`pow.c`, a header file, and `main_pow.c`. The main function should 
+take $x$ and $y$ as command line arguments.
+ 
+
+## What to turn in
+
+1. Create a dirtectory `hw4`
+2. Turn in files `digit_freq.c`, `digit_freq.s`, `digit_freq.h`, and `main_df.c`
+3. Turn in files `pow.c`, `pow.s`, `pow.h`, and `main_pow.c`
+
