@@ -48,8 +48,8 @@ $$
 x^y = 
 \left\lbrace
     \begin{array}{lr}
-        (x^{y/2})^2, & \text{if $x$ is even } \\
-        ||\triangle_{i}||^{2}, & \text{if } i\leq k
+        (x^{y/2})^2, & \text{if $y$ is even } \\
+        x\cdot x^{y-1}, & \text{if $y$ is odd }
     \end{array}
 \right\rbrace
 $$
