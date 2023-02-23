@@ -1,6 +1,6 @@
 # Homework 4 
 
-Due Friday March 3. 
+Due Friday March 3 by the start of class at 9:20AM. 
 
 ## Digit Frequency (5 points)
 Write a program that counts the number of times a digit occurs 
@@ -59,7 +59,14 @@ In the first two cases $x^{y}$ is defined in terms of computing
 $x^{y^\prime}$ where $y^\prime < y$.  The base case is when $y$ is $0$.
 
 Write a function `pow(x,y)` in both C and assembly and uses the recursive i
-algorithm above to compute $x^y$. Make sure your functions are 
+algorithm above to compute $x^y$. 
+
+```
+// pow.h
+extern int pow(int x, int y);
+```
+
+Make sure your functions are 
 recursive and not iterative (that is, using loops). Create functions 
 `pow.c`, a header file, and `main_pow.c`. The main function should 
 take $x$ and $y$ as command line arguments.
