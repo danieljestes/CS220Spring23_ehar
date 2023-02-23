@@ -45,11 +45,10 @@ the digit frequency in a nicely formatted table (like above).
 Consider the following definition for computing $x^y$.
 
 $$
-Y(i,k) = 
+x^y = 
 \left\lbrace
     \begin{array}{lr}
-        ||R_{k}-R_{i}||^{2}, & \text{if } i \neq k\\
+        (x^{y/2})^2, & \text{if $x$ is even } \\
         ||\triangle_{i}||^{2}, & \text{if } i\leq k
     \end{array}
-\right\rbrace = yz
 $$
