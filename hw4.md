@@ -59,17 +59,17 @@ $$
 In the first two cases $x^{y}$ is defined in terms of computing 
 $x^{y^\prime}$ where $y^\prime < y$.  The base case is when $y$ is $0$.
 
-Write a function `pow(x,y)` in both C and assembly and uses the recursive 
+Write a function `ipow(x,y)` in both C and assembly and uses the recursive 
 algorithm above to compute $x^y$. 
 
 ```
-// pow.h
-extern int pow(int x, int y);
+// ipow.h
+extern int ipow(int x, int y);
 ```
 
 Make sure your functions are 
 recursive and not iterative (that is, using loops). Create functions 
-`pow.c`, a header file, and `main_pow.c`. The main function should 
+`ipow.c`, a header file, and `main_ipow.c`. The main function should 
 take $x$ and $y$ as command line arguments.
  
 
@@ -77,6 +77,6 @@ take $x$ and $y$ as command line arguments.
 
 1. Create a directory `hw4`
 2. Turn in files `digit_freq.c`, `digit_freq.s`, `digit_freq.h`, and `main_df.c`
-3. Turn in files `pow.c`, `pow.s`, `pow.h`, and `main_pow.c`
+3. Turn in files `ipow.c`, `ipow.s`, `ipow.h`, and `main_ipow.c`
 4. push all of your files to your course repo.
 
