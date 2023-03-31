@@ -7,11 +7,11 @@ Due Friday April 7 by the start of class at 9:20AM.
 Euler's number is the mathematical constant $e = 2.71828...$, and, like $\pi$, is an irrational number (i.e., goes on forever without repeating). $e$ arises in nature in various contexts, such as exponential growth and decay. In C, the function `exp(x)` computes $e^x$ where `x` is a real number (`double`). There is a beautiful formula for approximating $e^x$.
 
 $$
-e^x = \sum_{k=0}^{\infty}x^k/k! = x^0/0! + x^1/1! + x^2/2! + \dotsc + x^k/k! + \dotsc
+e^x = \sum_{k=0}^{\infty}x^k/k! = x^0/0! + x^1/1! + x^2/2! + \cdots + x^k/k! + \cdots
 $$
 
 Calculus students might recognize this as the Taylor series expansion of $e^x$. The notation $k!$ is read $k$-factorial
-and is $k\cdot(k-1)\cdot(k-2) \dotsc 2\cdot 1$. By definition $0! = 1$.
+and is $k\cdot(k-1)\cdot(k-2) \cdots 2\cdot 1$. By definition $0! = 1$.
 
 Write the function in both C (`exp.c`) and ARM assembly (`exp.s`) that both implement the function declaration...
 
