@@ -9,7 +9,7 @@ Euler's number is a mathematical constant $e = 2.71828...$, and, like $\pi$, is 
 Most programming languages provide a function `exp(x)` for computing $e^x$. There is a beautiful formula for approximating $e^x$.
 
 $$
-e^x = \sum_{k=0}^{\infty}x^k/k!
+e^x = \sum_{k=0}^{\infty}x^k/k! = x^0/0! + x^1/1! + x^2/2! + \dotsc + x^k/k! + \dotsc
 $$
 
 ```
