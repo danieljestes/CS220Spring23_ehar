@@ -4,7 +4,7 @@ Due Friday April 7 by the start of class at 9:20AM.
 
 ## Euler's Number and Computing $e^x$
 
-Euler's number is a mathematical constant $e = 2.71828...$, and, like $\pi$, is an irrational number (i.e., goes on forever without repeating). $e$ arises in nature in various contexts, such as exponential growth and decay. In C, the function `exp(x)` computes $e^x$ where `x` is a real number (`double`). There is a beautiful formula for approximating $e^x$.
+Euler's number is the mathematical constant $e = 2.71828...$, and, like $\pi$, is an irrational number (i.e., goes on forever without repeating). $e$ arises in nature in various contexts, such as exponential growth and decay. In C, the function `exp(x)` computes $e^x$ where `x` is a real number (`double`). There is a beautiful formula for approximating $e^x$.
 
 $$
 e^x = \sum_{k=0}^{\infty}x^k/k! = x^0/0! + x^1/1! + x^2/2! + \dotsc + x^k/k! + \dotsc
@@ -24,6 +24,11 @@ Your function should be written such that it does not call
 any other C library functions. In particular do not call the 
 C library function `pow` (or `exp` obviously) function. Also, there is no need to create or use a factorial function. In the loop that computes the sum, build up powers and factorials _as you go_. 
 
+Also, your loop cannot run an infinite number of times. Hint: there is a 
+point at which $k!$ will not fit in a thirty-two bit signed integer.  
+What value of $k$ is that? That is a natural limit on the number of 
+terms you should calculate out to.
+
 Write a main function in `main.c` that takes a double command 
 line argument and prints the value of $e^x$.
 
@@ -33,7 +38,7 @@ Do not use the `-S` compiler flag when writing `exp.s`. It will generate code we
 
 You can use the `vmov` function to copy the bits of an integer register to a floating-point register.
 
-For example `vmov s2, r0` copies the bits in `r0` to 
+For example `vmov s2, r0` copies the raw bits in `r0` to 
 the thirty-two bit floating-point register `s0`. 
 This just copies the bits, it does not, for 
 example, convert an integer to its floating-point 
@@ -46,7 +51,9 @@ To actually do the conversion you use the instruction
 vcvt.f64.s32 d0,s2
 ```
 
-This converts a signed thirty-two bit number (`s32`) to a double precision number (`f64`).
+This converts a signed thirty-two bit number in `s2` to a double precision number and put in `d0`. (`f64`).  The `s32` indicates that the source register should be interpreted as a signed thirty-two bit number. The `f64` indicates that the destination
+register is double precision.
+
 
 ## What to turn in
 
