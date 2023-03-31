@@ -1,4 +1,4 @@
-# Homework 5 (DRAFT - NOT YET COMPLETE)
+# Homework 5
 
 Due Friday April 7 by the start of class at 9:20AM. 
 
@@ -24,24 +24,24 @@ Your function should be written such that it does not call
 any other C library functions. In particular do not call the 
 C library function `pow` (or `exp` obviously) function. Also, there is no need to create or use a factorial function. In the loop that computes the sum, build up powers and factorials _as you go_. 
 
-Also, your loop cannot run an infinite number of times. Hint: there is a 
-point at which $k!$ will not fit in a thirty-two bit signed integer.  
-What value of $k$ is that? That is a natural limit on the number of 
+Also, your loop cannot run an infinite number of times (as the 
+summation notation suggests). Hint: there is a 
+point at which $k!$ will not fit into a thirty-two bit signed integer.  
+What value of $k$ is that? That value of $k$ then, will be the natural 
+limit on the number of 
 terms you should calculate out to.
 
-Write a main function in `main.c` that takes a double command 
+Write a `main` function in `main.c` that takes a double command 
 line argument and prints the value of $e^x$.
 
-Do not use the `-S` compiler flag when writing `exp.s`. It will generate code we have not covered in class and is easily detectable.
+Do not use the `-S` compiler flag when writing `exp.s`. The C compiler will generate code we have not covered in class and is easily detectable.
 
 ## Converting between integers and floating-point 
 
-You can use the `vmov` function to copy the bits of an integer register to a floating-point register.
-
-For example `vmov s2, r0` copies the raw bits in `r0` to 
-the thirty-two bit floating-point register `s0`. 
-This just copies the bits, it does not, for 
-example, convert an integer to its floating-point 
+You can use the `vmov` function to copy the bits of an 
+integer register to a floating-point register. For example, `vmov s2, r0` copies the 
+raw bits in `r0` to the thirty-two bit floating-point register `s0`. 
+It does not convert an integer to its floating-point 
 equivaliant. That is, it will not convert the integer `1` 
 to the floating-point value `1.0`.
 
@@ -51,13 +51,13 @@ To actually do the conversion you use the instruction
 vcvt.f64.s32 d0,s2
 ```
 
-This converts a signed thirty-two bit number in `s2` to a double precision number and put in `d0`. (`f64`).  The `s32` indicates that the source register should be interpreted as a signed thirty-two bit number. The `f64` indicates that the destination
+This converts a signed thirty-two bit number in `s2` to a double precision number and put in `d0`. The `s32` indicates that the source register should be interpreted as a signed thirty-two bit number. The `f64` indicates that the destination
 register is double precision.
 
 
 ## What to turn in
 
-1. Create a directory `hw4`
+1. Create a directory `hw5`
 3. Turn in files `main.c`, `exp.s`, `exp.h`, and `exp.c`
-4. push all of your files to your course repo.
+4. Push all of your files to your course repo.
 
