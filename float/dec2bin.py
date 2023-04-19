@@ -9,7 +9,7 @@ def dec2bin(f : float) -> str:
    for i in range(64): 
         f = f * 2
 
-        if f > 1:
+        if f >= 1:
             f = f - 1
             r = r + '1'
         else:
