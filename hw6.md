@@ -77,8 +77,7 @@ endwhile:
 	bx lr
 ``` 
 
-    a. What are the first three instructions of `sum` doing? How did we normally write that during the semester?
+a. What are the first three instructions of `sum` doing? How did we normally write that during the semester?
 
-    b. What are the last three instructions of `sum` doing? How did we normally write that during the semester?
+b. What are the last three instructions of `sum` doing? How did we normally write that during the semester?
 	
-	c.
