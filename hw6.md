@@ -13,9 +13,7 @@ on the final exam.
 
 2. What assembly instruction corresponds to the encoding `b0130594`.
 Explain every portion of the instruction format and describe the process
-you went through to decode the instruction beginning at the web page [Arm Instruction Set Encoding](https://developer.arm.com/documentation/ddi0406/c/Application-Level-Architecture/ARM-Instruction-Set-Encoding/ARM-instruction-set-encoding)
-
-Double check your work using `objdump`.
+you went through to decode the instruction beginning at the web page [Arm Instruction Set Encoding](https://developer.arm.com/documentation/ddi0406/c/Application-Level-Architecture/ARM-Instruction-Set-Encoding/ARM-instruction-set-encoding). Double check your work using `objdump`.
 
 3. Consider the C function `f` below.
 ```
@@ -26,12 +24,12 @@ int f(int x) {
         return x - 1;
 }
 ```
-Write `f` in ARM assembly using conditional exeuction of instruction
-with no branching. Provide comments explaining the code. Do this by hand and verify your work using `-O3`. However, you cannot do this on the exam, so I suggest you try to do this by hand first. 
+Write `f` in ARM assembly using conditional instruction execution
+with no branching. Provide comments explaining the code. Do this by hand and verify your work using `-O3`. However, you will not be able to do this on the exam, so I suggest you do this by hand first. 
 
 4. Consider the ARM instruction `str r0, [r1, #4]` and the [CPU datapath](https://diveintosystems.org/book/C5-Arch/_images/cpu.png) from *Dive Into Systems*.
  
-    a. What are the values of `WE`, `Sw`, `Sr<sub>1</sub>`, and `Sr<sub>0</sub>`.
+    a. What are the values of `WE`, `Sw`, `Sr`<sub>`1`</sub>, and `Sr<sub>0</sub>`.
 
     b. What value is on the wite coming from the output of the ALU.
 
