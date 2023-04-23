@@ -52,31 +52,31 @@ int sum(int vec[], int n) {
 
 Here is an assembly language version.
 
-```
-sum:
-    str r4, [sp,#-4]
-    str r5, [sp,#-8]
-    sub sp, sp, #8
-    mov r2, #0   // sum = 0
-    mov r3, #0   // i = 0
+	```
+	sum:
+		str r4, [sp,#-4]
+		str r5, [sp,#-8]
+		sub sp, sp, #8
+		mov r2, #0   // sum = 0
+		mov r3, #0   // i = 0
 
-while:
-    cmp r3, r1      // while i < n
-    bge endwhile
-    lsl r4, r3, #2  // 4 * i
-    add r4, r0, r4  // vec + 4i
-    ldr r5, [r4]    // r4 = vec[i]
-    add r2, r2, r5  // sum = sum + r4
-    add r3, r3, #1  // i = i + 1
-    b while
+	while:
+		cmp r3, r1      // while i < n
+		bge endwhile
+		lsl r4, r3, #2  // 4 * i
+		add r4, r0, r4  // vec + 4i
+		ldr r5, [r4]    // r4 = vec[i]
+		add r2, r2, r5  // sum = sum + r4
+		add r3, r3, #1  // i = i + 1
+		b while
 
-endwhile:
-    mov r0, r2
-    ldr r5, [sp, #8]
-    ldr r4, [sp, #4]
-    add sp, sp, #8
-    bx lr
-``` 
+	endwhile:
+		mov r0, r2
+		ldr r5, [sp, #8]
+		ldr r4, [sp, #4]
+		add sp, sp, #8
+		bx lr
+	``` 
     a. What are the first three instructions of `sum` doing? How did we normally write that during the semester?
 
     b. What are the last three instructions of `sum` doing? How did we normally write that during the semester?
