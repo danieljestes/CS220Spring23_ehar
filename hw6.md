@@ -29,7 +29,7 @@ with no branching. Provide comments explaining the code. Do this by hand and ver
 
 4. Consider the ARM instruction `str r0, [r1, #4]` and the [CPU datapath](https://diveintosystems.org/book/C5-Arch/_images/cpu.png) from *Dive Into Systems*.
  
-    a. What are the values of `WE`, `Sw`, `Sr`<sub>`1`</sub>, and `Sr<sub>0</sub>`.
+    a. What are the values of **WE**, **Sw**, **Sr<sub>1</sub>**, and **Sr<sub>0</sub>**.
 
     b. What value is on the wite coming from the output of the ALU.
 
