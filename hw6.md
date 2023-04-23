@@ -23,6 +23,7 @@ int f(int x) {
     else
         return x - 1;
 }
+
 ```
 Write `f` in ARM assembly using conditional instruction execution
 with no branching. Provide comments explaining the code. Do this by hand and verify your work using `-O3`. However, you will not be able to do this on the exam, so I suggest you do this by hand first. 
@@ -33,7 +34,7 @@ with no branching. Provide comments explaining the code. Do this by hand and ver
 
     b. What value is on the wite coming from the output of the ALU.
 
-    c. What are the selector values for `MUX<sub>A</sub>`, `MUX<sub>B</sub>`, and the `MUX<sub>DataIn</sub>`. 	
+    c. What are the selector values for **MUX<sub>A</sub>**, **MUX<sub>B</sub>**, and the **MUX<sub>DataIn</sub>**. 	
  
 5. Consider the C function `sum` below that sums up the items in an array.
 
@@ -52,7 +53,6 @@ int sum(int vec[], int n) {
 Here is an assembly language version.
 
 ```
-
 sum:
     str r4, [sp,#-4]
     str r5, [sp,#-8]
@@ -77,7 +77,6 @@ endwhile:
     add sp, sp, #8
     bx lr
 ``` 
-
     a. What are the first three instructions of `sum` doing? How did we normally write that during the semester?
 
     b. What are the last three instructions of `sum` doing? How did we normally write that during the semester?
