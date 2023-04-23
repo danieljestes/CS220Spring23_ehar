@@ -51,8 +51,7 @@ int sum(int vec[], int n) {
 ```
 
 Here is an assembly language version.
-
-	```
+```
 	sum:
 		str r4, [sp,#-4]
 		str r5, [sp,#-8]
@@ -76,7 +75,7 @@ Here is an assembly language version.
 		ldr r4, [sp, #4]
 		add sp, sp, #8
 		bx lr
-	``` 
+``` 
     a. What are the first three instructions of `sum` doing? How did we normally write that during the semester?
 
     b. What are the last three instructions of `sum` doing? How did we normally write that during the semester?
