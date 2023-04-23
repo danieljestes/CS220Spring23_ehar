@@ -11,12 +11,33 @@ portion of the 32 bit encoding.  Check your work with `objdump` but do not
 use that to determine the encoding. You will not be able to use `objdump` 
 on the final exam. 
 
-2. What assembly instruciton corresponds to the encoding `b0130594`.
+2. What assembly instruction corresponds to the encoding `b0130594`.
 Explain every portion of the instruction format and describe the process
-you went through to decode the instruction beginning at the web page
+you went through to decode the instruction beginning at the web page [Arm Instruction Set Encoding](https://developer.arm.com/documentation/ddi0406/c/Application-Level-Architecture/ARM-Instruction-Set-Encoding/ARM-instruction-set-encoding)
 
-https://developer.arm.com/documentation/ddi0406/c/Application-Level-Architecture/ARM-Instruction-Set-Encoding/ARM-instruction-set-encoding 
+Double check your work using `objdump`.
 
+3. Consider the C function `f` below.
+```
+int f(int x) {
+    if (x < 0)
+        return x + 1;
+    else
+        return x - 1;
+}
+```
+Write `f` in ARM assembly using conditional exeuction of instruction
+with no branching. Provide comments explaining the code. Do this by hand and verify your work using `-O3`. However, you cannot do this on the exam, so I suggest you try to do this by hand first. 
+
+4. Consider the ARM instruction `str r0, [r1, #4]` and the [CPU datapath](https://diveintosystems.org/book/C5-Arch/_images/cpu.png) from *Dive Into Systems*.
+ 
+    a. What are the values of `WE`, `Sw`, `Sr<sub>1</sub>`, and `Sr<sub>0</sub>`.
+
+    b. What value is on the wite coming from the output of the ALU.
+
+    c. What are the selector values for `MUX<sub>A</sub>`, `MUX<sub>B</sub>`, and the `MUX<sub>DataIn</sub>`. 	
+ 
+5. Consider the C function `sum` below that sums up the items in an array.
 
 ```
 int sum(int vec[], int n) {
@@ -30,6 +51,8 @@ int sum(int vec[], int n) {
 }
 ```
 
+Here is an assembly language version.
+
 ```
 
 sum:
@@ -40,7 +63,7 @@ sum:
     mov r3, #0   // i = 0
 
 while:
-    cmp r3, r1
+    cmp r3, r1      // while i < n
     bge endwhile
     lsl r4, r3, #2  // 4 * i
     add r4, r0, r4  // vec + 4i
@@ -57,4 +80,8 @@ endwhile:
     bx lr
 ``` 
 
+    a. What are the first three instructions of `sum` doing? How did we normally write that during the semester?
 
+    b. What are the last three instructions of `sum` doing? How did we normally write that during the semester?
+	
+	c.
