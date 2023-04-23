@@ -82,5 +82,8 @@ a. What are the first three instructions of `sum` doing? How did we normally wri
 b. What are the last three instructions of `sum` doing? How did we normally write that during the semester?
 
 c. In the course repo there is a Word docuemtn `pipeline.docx`.  Assuming the array being summed is of length two, complete filling in the pipleine stages until the function is complete.  Assume the pipeline can do ALU-ALU, MEM-ALU, and ALU-MEM 
-forwarding, mark each forwarding path required. Mark any stalls required using an `X` in the dodument. See ![PipelineDiagram](pipeline.png)
+forwarding, mark each forwarding path required. Mark any stalls required using an `X` in the dodument. 
+
+![PipelineDiagram](pipeline.png)
+
 	
