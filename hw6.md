@@ -1,7 +1,7 @@
-# Homework 5
+# Homework 6
 
 Due Monday May 1 by the start of class at 9:20AM. This is a written 
-assignment. Turn it in neat and stapled.  
+assignment. Turn in a very neat writeup of these problems with all pages stapled. 
 
 ## Instruction Set Details
 
@@ -26,13 +26,13 @@ int f(int x) {
 
 ```
 Write `f` in ARM assembly using conditional instruction execution
-with no branching. Provide comments explaining the code. Do this by hand and verify your work using `-O3`. However, you will not be able to do this on the exam, so I suggest you do this by hand first. 
+with no branching. Provide comments explaining the code. Do this by hand and verify your work using `-O3`. However, you will not be able to use `-O3` on the exam, sodo this by hand first. 
 
 4. Consider the ARM instruction `str r0, [r1, #4]` and the [CPU datapath](https://diveintosystems.org/book/C5-Arch/_images/cpu.png) from *Dive Into Systems*.
  
     a. What are the values of **WE**, **Sw**, **Sr<sub>1</sub>**, and **Sr<sub>0</sub>**.
 
-    b. What value is on the wite coming from the output of the ALU.
+    b. What value is on the wire(s) coming from the output of the ALU.
 
     c. What are the selector values for **MUX<sub>A</sub>**, **MUX<sub>B</sub>**, and the **MUX<sub>DataIn</sub>**. 	
  
@@ -81,9 +81,11 @@ a. What are the first three instructions of `sum` doing? How did we normally wri
 
 b. What are the last three instructions of `sum` doing? How did we normally write that during the semester?
 
-c. In the course repo there is a Word docuemtn [`pipeline.docx`](pipeline.docx).  Assuming the array being summed is of length two, complete filling in the pipleine stages until the function is complete.  Assume the pipeline can do ALU-ALU, MEM-ALU, and ALU-MEM 
-forwarding, mark each forwarding path required. Mark any stalls required using an `X` in the dodument.  I started the table for you. 
+c. In the course repo there is a Word document [`pipeline.docx`](pipeline.docx).  Assuming the array being summed is of length two, complete filling in the pipleine stages until the function is complete.  Assume the pipeline can do ALU-ALU, MEM-ALU, and ALU-MEM forwarding, mark each forwarding path required. Mark any stalls required using an `X` in the dodument.  I started the table for you ... 
 
 ![PipelineDiagram](pipeline.png)
 
-	
+d. How many cycles did it take to execute the code on the pipelined datapth?  Explain answer.
+
+e. Assuming each stage takes one cycle, how many cycles would it take to execute on a non-pipelined datapath? Explain answer.
+
