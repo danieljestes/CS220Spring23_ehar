@@ -26,7 +26,7 @@ int f(int x) {
 
 ```
 Write `f` in ARM assembly using conditional instruction execution
-with no branching. Provide comments explaining the code. Do this by hand and verify your work using `-O3`. However, you will not be able to use `-O3` on the exam, sodo this by hand first. 
+with no branching. Provide comments explaining the code. Do this by hand and verify your work using `-O3`. However, you will not be able to use `-O3` on the exam, so do this by hand first. 
 
 4. Consider the ARM instruction `str r0, [r1, #4]` and the [CPU datapath](https://diveintosystems.org/book/C5-Arch/_images/cpu.png) from *Dive Into Systems*.
  
@@ -34,7 +34,9 @@ with no branching. Provide comments explaining the code. Do this by hand and ver
 
     b. What value is on the wire(s) coming from the output of the ALU.
 
-    c. What are the selector values for **MUX<sub>A</sub>**, **MUX<sub>B</sub>**, and the **MUX<sub>DataIn</sub>**. 	
+    c. What are the selector values for **MUX<sub>A</sub>**, **MUX<sub>B</sub>**, and the **MUX<sub>DataIn</sub>** 	
+	
+    d. In terms of the five statges of instruction execution, explain what happens at each stage. 
  
 5. Consider the C function `sum` below that sums up the items in an array.
 
@@ -77,9 +79,9 @@ endwhile:
 	bx lr
 ``` 
 
-a. What are the first three instructions of `sum` doing? How did we normally write that during the semester?
+a. What are the first three instructions of `sum` doing? How did we normally write these instructions during the semester? Explain why the offsets are negative and why we are subtracting from the stack pointer.
 
-b. What are the last three instructions of `sum` doing? How did we normally write that during the semester?
+b. What are the last three instructions of `sum` doing? How did we normally write that during the semester? Explain why the offsets are positive and why we are adding to the stack pointer.
 
 c. In the course repo there is a Word document [`pipeline.docx`](pipeline.docx).  Assuming the array being summed is of length two, complete filling in the pipleine stages until the function is complete.  Assume the pipeline can do ALU-ALU, MEM-ALU, and ALU-MEM forwarding, mark each forwarding path required. Mark any stalls required using an `X` in the dodument.  I started the table for you ... 
 
@@ -88,4 +90,6 @@ c. In the course repo there is a Word document [`pipeline.docx`](pipeline.docx).
 d. How many cycles did it take to execute the code on the pipelined datapth?  Explain answer.
 
 e. Assuming each stage takes one cycle, how many cycles would it take to execute on a non-pipelined datapath? Explain answer.
+
+f. Make a modification to the ordering of the instructions that eliminates one of the pipeline stalls. Be very clear explaining why the stall is removed.  
 
