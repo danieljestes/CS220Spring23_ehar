@@ -1,4 +1,4 @@
-# Homework 6
+# Homework 6 (10 points)
 
 Due Monday May 1 by the start of class at 9:20AM. This is a written 
 assignment. Turn in a very neat writeup of these problems with all pages stapled. 
