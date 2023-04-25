@@ -10,7 +10,7 @@ assignment. Turn in a very neat writeup of these problems with all pages stapled
 portion of the 32 bit encoding.  Check your work with `objdump` but do not
 use that to determine the encoding. You will not be able to use `objdump` 
 on the final exam. In order to get this instruction to compile use 
-the assem,bler directive
+the assembler directive
 ```
 .syntax unified
 ```
