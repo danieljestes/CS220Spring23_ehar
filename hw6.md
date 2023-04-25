@@ -9,7 +9,11 @@ assignment. Turn in a very neat writeup of these problems with all pages stapled
 32 bit ARM instruction encoding.  Be clear and neat, and explain every 
 portion of the 32 bit encoding.  Check your work with `objdump` but do not
 use that to determine the encoding. You will not be able to use `objdump` 
-on the final exam. 
+on the final exam. In order to get this instruction to compile use 
+the assem,bler directive
+```
+.syntax unified
+```
 
 2. What assembly instruction corresponds to the encoding `b0130594`.
 Explain every portion of the instruction format and describe the process

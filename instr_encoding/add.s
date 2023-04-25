@@ -8,3 +8,4 @@ f:
   adds r4, r2, #255
   eorslt r1,r8,#62
   sub r1, r2, r3, asr #2
+  addsge r1, sp, #254
