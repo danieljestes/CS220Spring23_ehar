@@ -9,3 +9,4 @@ f:
   eorslt r1,r8,#62
   sub r1, r2, r3, asr #2
   addslt r1, r2, r3, lsl #2
+  addsge r1, sp, #254
