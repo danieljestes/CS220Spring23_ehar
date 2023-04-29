@@ -73,9 +73,9 @@ while:
 
 endwhile:
 	mov r0, r2
+	add sp, sp, #8
 	ldr r5, [sp, #8]
 	ldr r4, [sp, #4]
-	add sp, sp, #8
 	bx lr
 ``` 
 
