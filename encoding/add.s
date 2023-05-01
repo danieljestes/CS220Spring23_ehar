@@ -9,3 +9,7 @@ f:
     addsge r1, sp, #254 
     mulslt r3, r4, r5
     addsge r1, sp, #254
+
+
+    // r0 = r1*5 = r1 + r1*4  
+    add r0,r1,r1, lsl #2 
