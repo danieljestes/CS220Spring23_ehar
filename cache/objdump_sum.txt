@@ -1,0 +1,25 @@
+
+sum.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <sum>:
+   0:	e92d0030 	push	{r4, r5}
+   4:	e3a02000 	mov	r2, #0
+   8:	e3a03000 	mov	r3, #0
+
+0000000c <while>:
+   c:	e1530001 	cmp	r3, r1
+  10:	aa000005 	bge	2c <endwhile>
+  14:	e1a04103 	lsl	r4, r3, #2
+  18:	e0804004 	add	r4, r0, r4
+  1c:	e5945000 	ldr	r5, [r4]
+  20:	e2833001 	add	r3, r3, #1
+  24:	e0822005 	add	r2, r2, r5
+  28:	eafffff7 	b	c <while>
+
+0000002c <endwhile>:
+  2c:	e1a00002 	mov	r0, r2
+  30:	e8bd0030 	pop	{r4, r5}
+  34:	e12fff1e 	bx	lr
