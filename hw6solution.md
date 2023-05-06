@@ -93,9 +93,7 @@ f:
 	for **MUX<sub>DataIn</sub>** is *don't care* because **WE** is `0`.
 	
     d. In terms of the five stages of instruction execution, explain what happens at each stage. 
-	
 	**Solution**
-	
 	    i.    **Fetch** The instruction is fetched out of memory at address `PC`.
 		ii.   **Decode**The instruction is decoded with register and imediate values now available to the ALU. 
 		iii.  **Execute** The ALU performans an operation on data from decode.
