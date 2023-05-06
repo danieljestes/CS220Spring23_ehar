@@ -156,9 +156,17 @@ c. In the course repo there is a Word document [`pipeline.docx`](pipeline.docx).
 
 ![PipelineDiagram](pipeline.png)
 
+**Solution**
+![PipelineDiagram](pipeline-solution.png)
+
 d. How many cycles did it take to execute the code on the pipelined datapth?  Explain answer.
+
+**Solution** 33 cycles
 
 e. Assuming each stage takes one cycle, how many cycles would it take to execute on a non-pipelined datapath? Explain answer.
 
+**Solution** Looks like 28 instructions, so $28(5) = 140$ cycles.
+
 f. Make a modification to the ordering of the instructions that eliminates one of the pipeline stalls. Be very clear explaining why the stall is removed.  
 
+**Solution** You can switch the two `add` instructions after the `ldr` so that the stall is no longer neede because the second `add` does not need the result of the `ldr`.
