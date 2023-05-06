@@ -40,7 +40,7 @@ Writing out the bits we have
 ```
 
     a. The 4-bit condition code is `b`, or `1011`, which is `lt`. 
-	b. Looking at the next twp bits, which are `00`, which is a data processing instruction.
+	b. Looking at the next two bits, which are `00`, which is a data processing instruction.
 	c. The `op` bit is a `0`, and `op1` is `00001` and `op2` is `1001`. This is a 
 	multiply.
 	d. The `S` is 1. 
@@ -66,7 +66,7 @@ with no branching. Provide comments explaining the code. Do this by hand and ver
 
 ```
 f:
-    tst r0, 0          // test to see if x is 0
+	tst r0, 0          // test to see if x is 0
 	addlt r0, r0, #1   // if it is, then add 1
 	subge r0, r0, #1   // otherwise subtract 1
 	bx lr
@@ -97,7 +97,7 @@ f:
 	    **Solution**
 	
 	    i.    **Fetch** The instruction is fetched out of memory at address `PC`.
-		ii.   **Decode**The instruction is decoded with registers values and imediate values available to the ALU. 
+		ii.   **Decode**The instruction is decoded with register and imediate values now available to the ALU. 
 		iii.  **Execute** The ALU performans an operation on data from decode.
 		iv.   **Memory** Load (`ldr`) and store (`str`) instructions access memory.
 		All other instructions do nothing during this phase.
@@ -139,14 +139,19 @@ while:
 endwhile:
 	mov r0, r2
 	add sp, sp, #8
-	ldr r5, [sp, #8]
-	ldr r4, [sp, #4]
+	ldr r5, [sp, #-8]  // offsets should have been negative
+	ldr r4, [sp, #-4]  // offsets should have been negative
 	bx lr
 ``` 
 
 a. What are the first three instructions of `sum` doing? How did we normally write these instructions during the semester? Explain why the offsets are negative and why we are subtracting from the stack pointer.
 
+**Solution** Pushing `r4` and `r5` on the stack.  The offsets are negative because the stack grows down.
+
 b. What are the last three instructions of `sum` doing? How did we normally write that during the semester? Explain why the offsets are positive and why we are adding to the stack pointer.
+
+**Solution**. Well, these three lines are broken. Supposed to pop the stack, but the 
+offsets needed to be neagtive. 
 
 c. In the course repo there is a Word document [`pipeline.docx`](pipeline.docx).  Assuming the array being summed is of length two, complete filling in the pipeline stages until the function is complete.  Assume the pipeline can do ALU-ALU, MEM-ALU, and ALU-MEM forwarding, mark each forwarding path required. Mark any stalls required using an `X` in the dodument.  I started the table for you ... 
 
