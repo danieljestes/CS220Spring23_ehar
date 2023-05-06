@@ -27,15 +27,27 @@ Based on the encoding for add immediate instructions the bits are
 A    2    9    D    1    0    F    E
 ```
 
-
-
-
-
-
-
 2. What assembly instruction corresponds to the encoding `b0130594`.
 Explain every portion of the instruction format and describe the process
 you went through to decode the instruction beginning at the web page [Arm Instruction Set Encoding](https://developer.arm.com/documentation/ddi0406/c/Application-Level-Architecture/ARM-Instruction-Set-Encoding/ARM-instruction-set-encoding). Double check your work using `objdump`.
+
+**Solution**
+
+Writing out the bits we have 
+
+```
+1011 0000 0001 0011 0000 0101 1001 0100
+```
+
+    a. The 4-bit condition code is `b`, or `1011`, which is `lt`. 
+	b. Looking at the next twp bits, which are `00`, which is a data processing instruction.
+	c. The `op` bit is a `0`, and `op1` is `00001` and `op2` is `1001`. This is a 
+	multiply.
+	d. The `S` is 1. 
+	e. The destination register `Rd` is 3. The second source register `Rm` is 5
+    f. The first source register `Rn` is 4.	
+	
+Using this we can see that we have a `mulslt r3, r4, r5`.   
 
 3. Consider the C function `f` below.
 ```
@@ -50,15 +62,46 @@ int f(int x) {
 Write `f` in ARM assembly using conditional instruction execution
 with no branching. Provide comments explaining the code. Do this by hand and verify your work using `-O3`. However, you will not be able to use `-O3` on the exam, so do this by hand first. 
 
+**Solution**
+
+```
+f:
+    tst r0, 0          // test to see if x is 0
+	addlt r0, r0, #1   // if it is, then add 1
+	subge r0, r0, #1   // otherwise subtract 1
+	bx lr
+```
+
 4. Consider the ARM instruction `str r0, [r1, #4]` and the [CPU datapath](https://diveintosystems.org/book/C5-Arch/_images/cpu.png) from *Dive Into Systems*.
  
     a. What are the values of **WE**, **Sw**, **Sr<sub>1</sub>**, and **Sr<sub>0</sub>**.
+	
+	**Solution**: WE = 0 (because a register is not written) 
+	Sw = *don't care* (a register is not being written). 
+	Sr<sub>0</sub> = 1 (register 1), Sr<sub>0</sub> is a don't care because
+	there is only one source register.
 
     b. What value is on the wire(s) coming from the output of the ALU.
+	
+	**Solution:** `r1 + 4`
 
     c. What are the selector values for **MUX<sub>A</sub>**, **MUX<sub>B</sub>**, and the **MUX<sub>DataIn</sub>** 	
 	
-    d. In terms of the five statges of instruction execution, explain what happens at each stage. 
+	**Solution:**  Selector for **MUX<sub>A</sub>** is 1 because we need the 
+    value of `r1`.	Selector for **MUX<sub>B</sub>** is 0 because we need the 
+    immediate value of `4` coming directly out of the instruction. Selector
+	for **MUX<sub>DataIn</sub>** is *don't care* because **WE** is `0`.
+	
+    d. In terms of the five stages of instruction execution, explain what happens at each stage. 
+	
+	    **Solution**
+	
+	    i.    **Fetch** The instruction is fetched out of memory at address `PC`.
+		ii.   **Decode**The instruction is decoded with registers values and imediate values available to the ALU. 
+		iii.  **Execute** The ALU performans an operation on data from decode.
+		iv.   **Memory** Load (`ldr`) and store (`str`) instructions access memory.
+		All other instructions do nothing during this phase.
+		v.    **Writeback** Instructions that have a destination register, write the value back to the register file. Most instructions have a destination. There are a few that do not, `str`, `cmp`, `b<cond>`, `tst`. 
  
 5. Consider the C function `sum` below that sums up the items in an array.
 
