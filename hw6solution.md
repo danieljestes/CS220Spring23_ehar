@@ -94,7 +94,7 @@ f:
 	
     d. In terms of the five stages of instruction execution, explain what happens at each stage. 
 	
-	    **Solution**
+	**Solution**
 	
 	    i.    **Fetch** The instruction is fetched out of memory at address `PC`.
 		ii.   **Decode**The instruction is decoded with register and imediate values now available to the ALU. 
