@@ -94,12 +94,12 @@ f:
 	
     d. In terms of the five stages of instruction execution, explain what happens at each stage. 
 	**Solution**
-	    i.    **Fetch** The instruction is fetched out of memory at address `PC`.
-		ii.   **Decode**The instruction is decoded with register and imediate values now available to the ALU. 
-		iii.  **Execute** The ALU performans an operation on data from decode.
-		iv.   **Memory** Load (`ldr`) and store (`str`) instructions access memory.
+	    1.    **Fetch** The instruction is fetched out of memory at address `PC`.
+		2.   **Decode**The instruction is decoded with register and imediate values now available to the ALU. 
+		3.  **Execute** The ALU performans an operation on data from decode.
+		4.   **Memory** Load (`ldr`) and store (`str`) instructions access memory.
 		All other instructions do nothing during this phase.
-		v.    **Writeback** Instructions that have a destination register, write the value back to the register file. Most instructions have a destination. There are a few that do not, `str`, `cmp`, `b<cond>`, `tst`. 
+		5.    **Writeback** Instructions that have a destination register, write the value back to the register file. Most instructions have a destination. There are a few that do not, `str`, `cmp`, `b<cond>`, `tst`. 
  
 5. Consider the C function `sum` below that sums up the items in an array.
 
