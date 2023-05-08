@@ -78,7 +78,7 @@ f:
 	
 	**Solution**: WE = 0 (because a register is not written) 
 	Sw = *don't care* (a register is not being written). 
-	Sr<sub>0</sub> = 1 (register 1), Sr<sub>0</sub> is a don't care because
+	Sr<sub>0</sub> = 1 (register 1), Sr<sub>1</sub> is a don't care because
 	there is only one source register.
 
     b. What value is on the wire(s) coming from the output of the ALU.
